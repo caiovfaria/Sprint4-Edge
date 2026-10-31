@@ -1,0 +1,8 @@
+# Nunca publicar credenciais nem arquivos privados
+.private/
+.env
+.env.*
+secrets.h
+secrets.json
+*.token
+build/
