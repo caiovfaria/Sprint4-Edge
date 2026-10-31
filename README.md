@@ -22,15 +22,51 @@ Protótipo de monitoramento ambiental com **ESP32, DHT22, OLED SSD1306 I2C, buzz
 - [Resultados e capturas dos testes](TESTES.md)
 - [Configuração do Blynk](BLYNK.md)
 
-**Acesso do professor ao Blynk:** os links do Blynk exigem autenticação e permissão na conta/organização. O repositório, o Wokwi e as capturas são públicos. Publicar o link não concede acesso ao painel. Para cumprir integralmente esse requisito, o professor deve receber acesso de visualização pela plataforma; não compartilhe o token nem a senha da conta.
+**Visualização sem login:** o professor pode conferir abaixo as capturas reais da IHM e do painel Blynk, além do [registro completo dos testes](TESTES.md). O plano Free desta conta permite apenas um usuário e bloqueou o convite de um segundo usuário. Por isso, as evidências foram disponibilizadas publicamente no GitHub. Os links Blynk continuam sujeitos a login e autorização. As capturas demonstram a execução registrada; a aceitação delas em substituição ao acesso direto depende do professor.
 
-## Evidências principais
+## Demonstração visual para avaliação
 
-![Blynk recebendo 35 graus e ALERTA](evidencias/04-blynk-alerta.jpg)
+As imagens abaixo foram capturadas durante a execução do protótipo e mostram leituras reais enviadas ao Blynk. Não é necessário entrar no Blynk para vê-las. Clique em uma imagem para ampliá-la.
 
-![Decisão local em ALERTA com Blynk OFFLINE](evidencias/06-ihm-alerta-offline.jpg)
+### 1 Condição normal com acompanhamento remoto
 
-A integração, a operação durante a interrupção e a reconexão foram testadas. Consulte TESTES.md para a sequência completa. A simulação foi parada após os testes; é necessário iniciá-la e informar o token para voltar a transmitir.
+O DHT22 estava em 25 °C. O OLED mostrou NORMAL, o buzzer ficou desligado e a conexão com o Blynk estava ONLINE.
+
+![IHM em 25 graus NORMAL e Blynk ONLINE](evidencias/01-ihm-normal-online.jpg)
+
+O painel do dispositivo recebeu 25 °C, umidade 50 %, estado NORMAL e sensor válido igual a 1. O indicador de alarme ficou apagado.
+
+![Painel Blynk real em 25 graus e NORMAL](evidencias/02-blynk-normal.jpg)
+
+### 2 Alerta decidido no ESP32 e informado à nuvem
+
+A temperatura foi alterada para 35 °C. O ESP32 identificou localmente a condição acima de 30 °C, atualizou o OLED para ALERTA e acionou o buzzer.
+
+![IHM em 35 graus ALERTA e buzzer ligado](evidencias/03-ihm-alerta-online.jpg)
+
+O Blynk recebeu o resultado: 35 °C, estado ALERTA e indicador de alarme aceso. A plataforma apenas acompanha a decisão já tomada no ESP32.
+
+![Painel Blynk real em 35 graus e ALERTA](evidencias/04-blynk-alerta.jpg)
+
+### 3 Operação local durante a interrupção da nuvem
+
+Após uma conexão ativa, o comando 0 interrompeu Wi-Fi e Blynk e suspendeu as reconexões. Com 25 °C, o sistema continuou lendo o sensor, mostrando NORMAL no OLED e mantendo o buzzer desligado, apesar de Blynk OFFLINE.
+
+![Decisão local NORMAL com Blynk OFFLINE](evidencias/05-ihm-normal-offline.jpg)
+
+Ainda sem comunicação, a temperatura foi elevada para 35 °C. O OLED mostrou ALERTA e o buzzer foi acionado localmente. Essa mudança durante a interrupção demonstra a independência da decisão em relação à nuvem.
+
+![Decisão local ALERTA com Blynk OFFLINE](evidencias/06-ihm-alerta-offline.jpg)
+
+### 4 Reconexão e atualização do painel
+
+A temperatura voltou para 25 °C e o comando 1 permitiu a reconexão. O OLED voltou a mostrar Blynk ONLINE e o painel remoto recebeu novamente a leitura atual e o estado NORMAL.
+
+![IHM normal após reconexão do Blynk](evidencias/07-ihm-reconectada.jpg)
+
+![Painel Blynk atualizado após reconexão](evidencias/08-blynk-reconectado.jpg)
+
+Os instantes observados no Monitor Serial e os testes dos limites de 30,0 °C e 30,1 °C estão em [TESTES.md](TESTES.md). A simulação foi parada após os registros, para evitar som e consumo contínuo da cota Blynk. As imagens são registros estáticos; para executar novamente, siga as instruções abaixo.
 
 ## Regra e processamento na borda
 
@@ -93,7 +129,7 @@ Durante falha do sensor, V0 e V2 deixam de ser atualizados. Consulte V3 e V4 par
 
 ## Formato da entrega
 
-O enunciado da Sprint 4 de Edge Computing e Computer Systems pede código e links no GitHub, capturas da IHM e do Blynk e uma breve descrição das operações na borda e na nuvem. Vídeo não é exigido na seção consultada. A fotografia do protótipo aplica-se quando houver implementação física. A configuração de acesso do professor ao Blynk deve ser concluída antes da avaliação.
+O enunciado da Sprint 4 de Edge Computing e Computer Systems pede código e links no GitHub, capturas da IHM e do Blynk e uma breve descrição das operações na borda e na nuvem. Vídeo não é exigido na seção consultada. A fotografia do protótipo aplica-se quando houver implementação física. O plano Free desta conta bloqueou o convite de outro usuário. Esta entrega apresenta capturas públicas como evidência da integração; a aceitação dessa alternativa ao acesso direto deve ser confirmada com o professor.
 
 ## Referências oficiais
 

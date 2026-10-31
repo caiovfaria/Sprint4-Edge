@@ -33,7 +33,7 @@ O OLED SSD1306 é de 128 × 64 pixels e utiliza o endereço I2C 0x3C. O volume d
 - Dispositivo Blynk: https://blynk.cloud/dashboard/359336/global/devices/126785/organization/359336/devices/1091498/dashboard
 - Repositório GitHub: https://github.com/caiovfaria/Sprint4-Edge
 
-O link Blynk exige conta e permissão de acesso à organização/dispositivo; não é um link público de visualização. A concessão de acesso ao professor deve ser verificada antes da entrega.
+O link Blynk exige conta e permissão de acesso à organização/dispositivo; não é um link público de visualização. A tentativa de convite de outro usuário foi bloqueada pelo limite de um usuário do plano Free desta conta. Para apresentar os resultados sem login, as capturas reais da execução foram organizadas no README e em TESTES.md. A aceitação dessa alternativa ao acesso direto depende do professor.
 
 ## Evidências e reprodução
 
