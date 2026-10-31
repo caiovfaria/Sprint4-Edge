@@ -2,6 +2,16 @@
 
 Protótipo de monitoramento ambiental com **ESP32, DHT22, OLED SSD1306 I2C, buzzer e Blynk**. O ESP32 lê o sensor a cada 2 segundos, decide localmente e informa o estado à nuvem.
 
+## Integrantes do grupo
+
+| Integrante | RM |
+|---|---|
+| Arthur Alen | 571897 |
+| Caio Viana | 570634 |
+| Clara Diel | 571679 |
+| Anna Júlia Elias Andrade | 573453 |
+| João Thees Castro Santiago | 572829 |
+
 ## Acesso à entrega
 
 - **Repositório público:** https://github.com/caiovfaria/Sprint4-Edge
