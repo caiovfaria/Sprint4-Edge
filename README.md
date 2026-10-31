@@ -14,7 +14,6 @@ Protótipo de monitoramento ambiental com **ESP32, DHT22, OLED SSD1306 I2C, buzz
 
 ## Acesso à entrega
 
-- **Repositório público:** https://github.com/caiovfaria/Sprint4-Edge
 - **Simulação Wokwi:** https://wokwi.com/projects/479357102690024449
 - **Dispositivo e painel Blynk:** https://blynk.cloud/dashboard/359336/global/devices/126785/organization/359336/devices/1091498/dashboard
 - **Template Blynk:** https://blynk.cloud/dashboard/359336/templates/787381/dashboard
@@ -22,7 +21,7 @@ Protótipo de monitoramento ambiental com **ESP32, DHT22, OLED SSD1306 I2C, buzz
 - [Resultados e capturas dos testes](TESTES.md)
 - [Configuração do Blynk](BLYNK.md)
 
-**Visualização sem login:** o professor pode conferir abaixo as capturas reais da IHM e do painel Blynk, além do [registro completo dos testes](TESTES.md). O plano Free desta conta permite apenas um usuário e bloqueou o convite de um segundo usuário. Por isso, as evidências foram disponibilizadas publicamente no GitHub. Os links Blynk continuam sujeitos a login e autorização. As capturas demonstram a execução registrada; a aceitação delas em substituição ao acesso direto depende do professor.
+As capturas abaixo mostram os testes no Wokwi e os dados recebidos no Blynk. Como o plano gratuito permite apenas um usuário, deixamos os resultados aqui para consulta. O acesso direto ao painel Blynk exige login.
 
 ## Demonstração visual para avaliação
 
